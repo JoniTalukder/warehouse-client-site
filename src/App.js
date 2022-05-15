@@ -29,6 +29,7 @@ function App() {
           </RequireAuth>
         }></Route> */}
 
+       
         <Route path='/addProduct' element={
           <RequireAuth>
             <AddProduct></AddProduct>
@@ -40,7 +41,9 @@ function App() {
           </RequireAuth>
         }></Route>
 
-        <Route path='service/:serviceId' element={<ServiceDetail></ServiceDetail>}></Route>
+        <Route path='service/:serviceId' element={<RequireAuth>
+          <ServiceDetail></ServiceDetail>
+        </RequireAuth>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>

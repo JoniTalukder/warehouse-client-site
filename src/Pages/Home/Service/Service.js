@@ -20,7 +20,7 @@ const Service = ({ service }) => {
                     <p className="card-text">Supplier: {supplier}</p>
                     <p className="card-text">{qty}</p>
                     <Link to={`/service/${_id}`}>
-                        <button onClick={() => navigateCheckOut(_id)} className="btn btn-info">{name} Details</button>
+                        <button onClick={() => navigateCheckOut(_id)} className="btn btn-info">Update</button>
                     </Link>
                     
                     

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import useData from '../../../CustomHook/useData';
 import Service from '../Service/Service';
 import './Services.css';
@@ -12,11 +13,14 @@ const Services = () => {
             <h2 className='text-info text-center text-uppercase mt-5'>Our Services</h2>
             <div className='row'>
                 {
-                    services?.map(service => <Service
+                    services?.slice(0, 6).map(service => <Service
                         key={service._id}
                         service={service}
                     ></Service>)
                 }
+                <Link to='/manage'>
+                    <button className='btn btn-info'>Manage Inventory</button>
+                </Link>
             </div>
         </div>
     );
