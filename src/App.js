@@ -10,9 +10,11 @@ import Register from './Pages/Login/Register/Register';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import ManageProducts from './Pages/ManageProducts/ManageProducts';
 import NotFound from './Pages/NotFound/NotFound';
+import OrderList from './Pages/OrderList/OrderList';
 import ServiceDetail from './Pages/ServiceDetail/ServiceDetail';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
+
 
 
 function App() {
@@ -38,6 +40,11 @@ function App() {
         <Route path='/manage' element={
           <RequireAuth>
             <ManageProducts></ManageProducts>
+          </RequireAuth>
+        }></Route>
+        <Route path='/orderList' element={
+          <RequireAuth>
+            <OrderList></OrderList>
           </RequireAuth>
         }></Route>
 

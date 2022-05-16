@@ -10,6 +10,7 @@ const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 
     const navigate = useNavigate();
+    
     let errorMessage;
     if (error ) {
         errorMessage = <p className='text-danger'>Error: {error?.message} </p>
