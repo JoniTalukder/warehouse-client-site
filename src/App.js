@@ -9,6 +9,7 @@ import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import ManageProducts from './Pages/ManageProducts/ManageProducts';
+import MyItem from './Pages/MyItem/MyItem';
 import NotFound from './Pages/NotFound/NotFound';
 import OrderList from './Pages/OrderList/OrderList';
 import ServiceDetail from './Pages/ServiceDetail/ServiceDetail';
@@ -42,9 +43,9 @@ function App() {
             <ManageProducts></ManageProducts>
           </RequireAuth>
         }></Route>
-        <Route path='/orderList' element={
+        <Route path='/myItem' element={
           <RequireAuth>
-            <OrderList></OrderList>
+            <MyItem></MyItem>
           </RequireAuth>
         }></Route>
 

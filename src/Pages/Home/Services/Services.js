@@ -13,7 +13,7 @@ const Services = () => {
             <h2 className='text-info text-center text-uppercase mt-5'>Our Services</h2>
             <div className='row'>
                 {
-                    services?.slice(0, 6).map(service => <Service
+                    services?.slice(0,6).map(service => <Service
                         key={service._id}
                         service={service}
                     ></Service>)
