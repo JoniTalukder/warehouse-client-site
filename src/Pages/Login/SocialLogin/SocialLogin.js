@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap';
 import {useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useNavigate } from 'react-router-dom';
+import useToken from '../../../CustomHook/useToken';
 // import Loading from '../../Shared/Loading/Loading';
 
 
@@ -10,6 +11,8 @@ const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
 
     const navigate = useNavigate();
+
+    const [token] = useToken(user);
     
     let errorMessage;
     if (error ) {

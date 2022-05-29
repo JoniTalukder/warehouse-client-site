@@ -8,6 +8,7 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useToken from '../../../CustomHook/useToken';
 
 const Login = () => {
     let errorMessage;
@@ -27,11 +28,14 @@ const Login = () => {
     }
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
+    const [token] = useToken(user);
+
+
     const location = useLocation();
     let from = location.state?.from?.pathname || '/';
 
     if (user) {
-        navigate(from, { replace: true });
+        // navigate(from, { replace: true });
     }
     if (loading || sending) {
         return <Loading></Loading>
@@ -39,12 +43,13 @@ const Login = () => {
     if (error) {
         errorMessage = <p className='text-danger'>Error: {error?.message}</p>
     }
-    const handleSubmit = event => {
+    const handleSubmit = async event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        signInWithEmailAndPassword(email, password);
+        await signInWithEmailAndPassword(email, password);
     }
+
     const resetPassword = async () => {
         const email = emailRef.current.value;
         if (email) {

@@ -13,13 +13,32 @@ const MyItem = () => {
             .then(res => res.json())
             .then(data => setItem(data));
     }, [user]);
+
+    const handleDelete = id => {
+        const proceed = window.confirm("Are you sure want to Delete?");
+        if (proceed) {
+            const url = `http://localhost:5000/service/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    const remaining = item.filter(service => service._id !== id);
+                    setItem(remaining);
+                })
+        }
+    }
+
+
+
     return (
         <div>
             <h2>My Item List:{item.length}</h2>
             <div className='container d-flex gap-5 '>
                 {
                     item?.map(item =>
-                        <Card style={{ width: '18rem' }}>
+                        <Card key={item._id} style={{ width: '18rem' }}>
                             <Card.Img variant="top" src={item.img} />
                             <Card.Body>
                                 <Card.Title>{item.name}</Card.Title>
@@ -33,6 +52,7 @@ const MyItem = () => {
                                    Price: ${item.price}
                                 </Card.Text>
                             </Card.Body>
+                            <button className='btn btn-info' onClick={() => handleDelete(item._id)}>Delete</button>
                         </Card>
                     )
                 }

@@ -33,6 +33,7 @@ const Header = () => {
                                     <Nav.Link as={Link} to="myItem">My Items</Nav.Link>
                                 </>
                             }
+                            <Nav.Link as={Link} to="contactUs">Contact Us</Nav.Link>
                             {
                                 user ? 
                                 <Nav.Link as={Link} onClick={handleSignOut} to="login">

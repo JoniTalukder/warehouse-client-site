@@ -1,0 +1,75 @@
+[
+    {
+        "img": "https://i.ibb.co/tYvgsfn/milled-rice-bowl.jpg",
+        "name": "Rice",
+        "description": "Come from India.",
+        "price": 100,
+        "supplier": "Masud",
+        "qty": 10
+      },
+    {
+        "img": "https://i.ibb.co/BK4Qw0D/raw-onions.jpg",
+        "name": "Onion",
+        "description": "Come from Pakistan",
+        "price": 200,
+        "supplier": "Akash",
+        "qty": 100
+      },
+    {
+        "img": "https://i.ibb.co/QfGfv8k/chili.jpg",
+        "name": "Chili",
+        "description": "Come from China",
+        "price": 400,
+        "supplier": "Holiks",
+        "qty": 10000
+      },
+    {
+        "img": "https://i.ibb.co/Wp6sJY4/raw-meat.jpg",
+        "name": "Raw Meat",
+        "description": "Come from Afganistan",
+        "price": 100,
+        "supplier": "Joni",
+        "qty": 10
+      },
+    {
+        "img": "https://i.ibb.co/tYvgsfn/milled-rice-bowl.jpg",
+        "name": "Rice",
+        "description": "Local Product",
+        "price": 100,
+        "supplier": "Joni",
+        "qty": 10
+      },
+    {
+        "img": "https://i.ibb.co/BK4Qw0D/raw-onions.jpg",
+        "name": "Onion",
+        "description": "Come from China",
+        "price": 100,
+        "supplier": "Chin Fu",
+        "qty": 10
+      },
+    {
+        "img": "https://i.ibb.co/QfGfv8k/chili.jpg",
+        "name": "Chili",
+        "description": "Chili come from chili",
+        "price": 100,
+        "supplier": "Chili",
+        "qty": 10
+      },
+      {
+        "img": "https://i.ibb.co/tYvgsfn/milled-rice-bowl.jpg",
+        "name": "Rice",
+        "description": "Come from India.",
+        "price": 100,
+        "supplier": "Masud",
+        "qty": 10
+      },
+    {
+        "img": "https://i.ibb.co/BK4Qw0D/raw-onions.jpg",
+        "name": "Onion",
+        "description": "Come from Pakistan",
+        "price": 200,
+        "supplier": "Akash",
+        "qty": 100
+      }
+    
+]
