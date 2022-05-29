@@ -8,7 +8,7 @@ const ManageProducts = () => {
     const handleDelete = id => {
         const proceed = window.confirm("Are you sure want to Delete?");
         if (proceed) {
-            const url = `http://localhost:5000/service/${id}`;
+            const url = `https://pure-ravine-17489.herokuapp.com/service/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -26,9 +26,9 @@ const ManageProducts = () => {
             <div className='d-flex g-5'>
                 {
                     services.map(service => <div key={service._id}>
-                        
 
-                      <div className="card">
+
+                        <div className="card">
                             <img src={service.img} className="card-img-top" alt="..." />
                             <div className="card-body">
                                 <p className="card-text">{service.name}</p>

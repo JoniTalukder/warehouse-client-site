@@ -8,6 +8,8 @@ In the project directory, you can run:
 
 ### `Project Name: Grocery Warehouse`
 
+### `Project Link: https://simple-grocery-warehouse.web.app`
+
 
 ### `Git Link: https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-JoniTalukder`
 

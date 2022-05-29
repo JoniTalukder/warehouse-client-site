@@ -8,7 +8,7 @@ const MyItem = () => {
     const [item, setItem] = useState([]);
     useEffect(() => {
         const email = user.email;
-        const url = `http://localhost:5000/service?email=${email}`;
+        const url = `https://pure-ravine-17489.herokuapp.com/service?email=${email}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItem(data));
@@ -17,7 +17,7 @@ const MyItem = () => {
     const handleDelete = id => {
         const proceed = window.confirm("Are you sure want to Delete?");
         if (proceed) {
-            const url = `http://localhost:5000/service/${id}`;
+            const url = `https://pure-ravine-17489.herokuapp.com/service/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -46,10 +46,10 @@ const MyItem = () => {
                                     {item.description}
                                 </Card.Text>
                                 <Card.Text>
-                                   Quantity: {item.qty}
+                                    Quantity: {item.qty}
                                 </Card.Text>
                                 <Card.Text>
-                                   Price: ${item.price}
+                                    Price: ${item.price}
                                 </Card.Text>
                             </Card.Body>
                             <button className='btn btn-info' onClick={() => handleDelete(item._id)}>Delete</button>
