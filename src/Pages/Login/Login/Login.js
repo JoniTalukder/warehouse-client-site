@@ -28,14 +28,14 @@ const Login = () => {
     }
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
-    const [token] = useToken(user);
+    // const [token] = useToken(user);
 
 
     const location = useLocation();
     let from = location.state?.from?.pathname || '/';
 
     if (user) {
-        // navigate(from, { replace: true });
+        navigate(from, { replace: true });
     }
     if (loading || sending) {
         return <Loading></Loading>
